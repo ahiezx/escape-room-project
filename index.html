@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ESCAPE ROOM</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script defer src="./js/main.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>ESCAPE ROOM</h1>
+            <div class="start">
+                <button id="start">START</button>
+            </div>
+            <div id="game">
+                <div id="game-wrap">
+                    <video loop autoplay id="game-video">
+                        <source src="videos/select.webm" type="video/webm">
+                    </video>
+                    <button id="level-one" class="door"></button>
+                    <button id="level-two" class="door"></button>
+                    <button id="level-three" class="door"></button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+
+body {
+    margin:0;
+    padding:0;
+    color: #eee;
+    background-color: #222;
+    background-image: url('https://preview.redd.it/1ky60nq9nh091.png?auto=webp&s=d0319ed1afb1285f318828565c870df1495dfbe8');
+}
+
+#wrapper {
+    font-family: 'Annie Use Your Telescope', cursive;
+    margin: auto;
+    width: fit-content;
+    /* width:340px; */
+}
+#wrapper h1,p {
+    text-align: center;
+    text-shadow: 0px 2px 1px #000;
+}
+
+video {
+    max-width: 60%;
+}
+#game #game-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#game #level-one {
+    position: absolute;
+    left:30%;
+    width: 5%;
+    background: transparent;
+    border:none;
+    /* transform: rotate(2deg); */
+    height:33%;
+    right:0;
+    top:26%;
+    bottom:0;
+    cursor: pointer;
+    outline: none;
+}
+
+#game #level-two {
+    position: absolute;
+    left:64%;
+    width: 6%;
+    background: transparent;
+    border:none;
+    /* transform: rotate(2deg); */
+    height:32%;
+    right:0;
+    top:28%;
+    bottom:0;
+    cursor: pointer;
+    outline: none;
+}
+#game #level-three {
+    position: absolute;
+    left:47.9%;
+    width: 2%;
+    background: transparent;
+    border:none;
+    /* transform: rotate(2deg); */
+    height:14%;
+    right:0;
+    top:40%;
+    bottom:0;
+    cursor: pointer;
+    outline: none;
+}
+#game span {
+    background-color: #222;
+    padding:12px;
+    color:white;
+}
