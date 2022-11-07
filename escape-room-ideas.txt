@@ -1,0 +1,13 @@
+ESCAPE ROOM
+
+3 deuren - een voor elk level
+voor elke deur aparte code
+
+puzzel wordt moeilijker met elke level
+elke deur heeft een hint
+
++-2 puzzels per deur
+
+elk level heeft meer en meer puzzels waarvan alle het antwoord nodig is om de
+code voor de deur van de level te ontcijveren.
+
