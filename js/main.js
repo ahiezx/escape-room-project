@@ -3,9 +3,9 @@ const levelOneDoor = document.querySelector("#level-one");
 const levelTwoDoor = document.querySelector("#level-two");
 const levelThreeDoor = document.querySelector("#level-three");
 const video = document.querySelector('video');
-const startBtn = document.querySelector('#start');
-const startDiv = document.querySelector('.start')
-const gameDiv = document.querySelector('#game')
+const startBtn = document.querySelector('#start-btn');
+const startDiv = document.querySelector('#start');
+const gameDiv = document.querySelector('#game');
 
 // functions for entering levels
 const enterLevelOne = () => {
