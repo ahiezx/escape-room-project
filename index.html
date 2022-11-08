@@ -12,18 +12,34 @@
         <div id="wrapper">
             <h1>ESCAPE ROOM</h1>
             <div id="start">
-                <button id="start-btn">START</button>
+                <video autoplay muted id="start-video">
+                    <source src="videos/start.webm" type="video/webm">
+                </video>
             </div>
+            
             <div id="game">
                 <div id="game-wrap">
                     <video id="game-video">
                         <source src="videos/select.webm" type="video/webm">
                     </video>
-                    <button id="level-one" class="door"></button>
-                    <button id="level-two" class="door"></button>
-                    <button id="level-three" class="door"></button>
+                    <div id="level-one">
+                        <button class="door"></button>
+                    </div>
+                    <div id="level-two">
+                        <button class="door"></button>
+                    </div>
+                    <div id="level-three">
+                        <button class="door"></button>
+                    </div>
                 </div>
+                <br>
+                
+                <div class="hint">Hint: <i>Select a level</i></div>
+                
             </div>
+            <video id="load-in-vid" style="display: none;">
+                <source src="videos/enter1.webm" type="video/webm">
+            </video>
         </div>
     </body>
 </html>

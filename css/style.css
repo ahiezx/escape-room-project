@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+
 
 body {
     margin:0;
@@ -9,19 +11,55 @@ body {
 }
 
 #wrapper {
-    font-family: 'Annie Use Your Telescope', cursive;
     margin: auto;
     width: fit-content;
-    /* width:340px; */
+    /* width:1700px; */
 }
-#wrapper h1,p {
+#wrapper h1{
+    font-family: 'Annie Use Your Telescope', cursive;
     text-align: center;
-    text-shadow: 0px 2px 1px #000;
+    font-size:40px;
+    text-shadow: 2px 2px 1px #000;
 }
 
 video {
     max-width: 60%;
+    border-radius: 5px;
 }
+
+#game {
+    /* margin: auto; */
+    /* width: fit-content; */
+    /* width:340px; */
+    /* text-align: center; */
+    /* background-color: rgba(0,0,0,0.7); */
+    /* border-radius: 5px; */
+    padding: 10px;
+}
+
+#game .hint {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 20px;
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+    padding:10px;
+    margin: auto;
+    display:block;
+}
+#game .hint i {
+    display:inline;
+    color: #f00;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: all 0.2s;
+    filter:blur(4px);
+}
+#game .hint i:hover {
+    transition: all 0.2s;
+    filter:blur(0px);
+}
+
 #game #game-wrap {
     display: flex;
     align-items: center;
@@ -29,51 +67,108 @@ video {
     position: relative;
 }
 
-#game #level-one {
-    position: absolute;
+#game #level-one .door{
     left:30%;
     width: 5%;
-    background: transparent;
-    border:none;
-    /* transform: rotate(2deg); */
     height:33%;
     right:0;
     top:26%;
     bottom:0;
-    cursor: pointer;
-    outline: none;
 }
 
-#game #level-two {
+#game #level-two .door{
     position: absolute;
     left:64%;
     width: 6%;
-    background: transparent;
-    border:none;
-    /* transform: rotate(2deg); */
     height:32%;
     right:0;
     top:28%;
     bottom:0;
-    cursor: pointer;
-    outline: none;
 }
-#game #level-three {
-    position: absolute;
+#game #level-three .door{
     left:47.9%;
     width: 2%;
-    background: transparent;
-    border:none;
-    /* transform: rotate(2deg); */
     height:14%;
     right:0;
     top:40%;
     bottom:0;
-    cursor: pointer;
-    outline: none;
 }
+
+#game .level-title {
+    
+}
+
+#game #level-one .level-title{
+    left:30%;
+    width: 5%;
+    height:33%;
+    right:0;
+    top:26%;
+    bottom:0;
+}
+
+#game #level-two .level-title{
+    position: absolute;
+    left:27%;
+    width: 6%;
+    height:32%;
+    right:0;
+    top:18%;
+    bottom:0;
+}
+#game #level-three .level-title{
+    left:47.9%;
+    width: 2%;
+    height:14%;
+    right:0;
+    top:40%;
+    bottom:0;
+}
+
 #game span {
     background-color: #222;
     padding:12px;
     color:white;
+}
+
+#game .door {
+    position: absolute;
+    background: transparent;
+    border:none;
+    cursor: pointer;
+    outline: none;    
+}
+
+#start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#start #start-btn {
+    text-align: center; 
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: #222;
+    color: #eee;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 6px 144px 0px rgba(0,0,0,0.75);
+
+}
+.hint{
+    background-color: black;
+    color: white;
+    width: 30px;
+    text-align: center;
+    margin:auto;
+    display: block;
+    border-radius: 3px;
+
+}
+
+#start-video:hover {
+    cursor: pointer;
 }
