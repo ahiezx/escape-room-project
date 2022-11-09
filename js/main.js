@@ -8,11 +8,17 @@ const startBtn = document.querySelector('#start-btn');
 const startDiv = document.querySelector('#start');
 const gameDiv = document.querySelector('#game');
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 const loadVid = document.querySelector('#load-in-vid');
 const loadSrc = document.querySelector('#load-in-vid source');
 const hint = document.querySelector('.hint-text');
 const returnButton = document.querySelector("#return-button");
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 let gameStage;
