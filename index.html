@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ESCAPE ROOM</title>
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/levels/level1.css">
         <script defer src="./js/main.js"></script>
         <script defer src="./js/levels/level0.js"></script>
         <script defer src="./js/levels/level1.js"></script>
@@ -26,15 +27,31 @@
                     <video id="game-video">
                         <source src="videos/select.webm" type="video/webm">
                     </video>
-                    <div id="level-one">
-                        <button class="door"></button>
+                    <div class="select-room">
+
+                        <div id="level-one">
+                            <button class="door"></button>
+                        </div>
+                        <div id="level-two">
+                            <button class="door"></button>
+                        </div>
+                        <div id="level-three">
+                            <button class="door"></button>
+                        </div>
                     </div>
-                    <div id="level-two">
-                        <button class="door"></button>
+
+                    <div class="first-level">
+                        <div>
+                            <button id="clock"></button>
+                        </div>
+                        <div>
+                            <button id="letter"></button>
+                        </div>
+                        <div>
+                            <button id="hand"></button>
+                        </div>         
                     </div>
-                    <div id="level-three">
-                        <button class="door"></button>
-                    </div>
+
                 </div>
                 <br>
                 
