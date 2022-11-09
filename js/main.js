@@ -7,6 +7,13 @@ const source = document.querySelector("video > source")
 const startBtn = document.querySelector('#start-btn');
 const startDiv = document.querySelector('#start');
 const gameDiv = document.querySelector('#game');
+<<<<<<< Updated upstream
+=======
+const loadVid = document.querySelector('#load-in-vid');
+const loadSrc = document.querySelector('#load-in-vid source');
+const hint = document.querySelector('.hint-text');
+const returnButton = document.querySelector("#return-button");
+>>>>>>> Stashed changes
 
 let gameStage;
 
@@ -69,6 +76,20 @@ const enterLevelThree = () => {
 
 
 // executed after DOM loaded
+
+returnButton.addEventListener("click", () => {
+    console.log("return");
+    if (gameStage == "select") {
+        alert("You are already as far back as you can go!");
+    } else {
+        gameStage = "select";
+        source.attributes.src.nodeValue = "videos/select.webm";
+        video.load();
+        video.play();
+        showDoors();
+    }
+});
+
 levelOneDoor.addEventListener("click", videoLevelOne);
 levelTwoDoor.addEventListener("click", videoLevelTwo);
 levelThreeDoor.addEventListener("click", videoLevelThree);
