@@ -21,6 +21,43 @@ body {
 
 video {
     max-width: 60%;
+<<<<<<< Updated upstream
+=======
+    border-radius: 5px;
+}
+
+/* #game { */
+    /* margin: auto; */
+    /* width: fit-content; */
+    /* width:340px; */
+    /* text-align: center; */
+    /* background-color: rgba(0,0,0,0.7); */
+    /* border-radius: 5px; */
+    /* padding: 10px; */
+/* } */
+
+#game .hint {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 20px;
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+    padding:10px;
+    margin: auto;
+    display:block;
+}
+#game .hint i {
+    display:inline;
+    color: #f00;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: all 0.2s;
+    filter:blur(4px);
+}
+#game .hint i:hover {
+    transition: all 0.2s;
+    filter:blur(0px);
+>>>>>>> Stashed changes
 }
 #game #game-wrap {
     display: flex;
@@ -31,6 +68,44 @@ video {
 
 #game #level-one {
     position: absolute;
+<<<<<<< Updated upstream
+=======
+    left:68%;
+    width: 9%;
+    height:32%;
+    right:0;
+    top:28%;
+    bottom:0;
+}
+#game #level-three .door{
+    left:47%;
+    width: 3%;
+    height:14%;
+    right:0;
+    top:40%;
+    bottom:0;
+}
+
+#game #skullhov button {
+    position: absolute;
+    left:24%;
+    width: 10%;
+    height:16%;
+    right:0;
+    top:51%;
+    bottom:0;
+    background: transparent;
+    border:none;
+    cursor: crosshair;
+    outline: none;
+}
+
+#game .level-title {
+    
+}
+
+#game #level-one .level-title{
+>>>>>>> Stashed changes
     left:30%;
     width: 5%;
     background: transparent;
@@ -76,4 +151,59 @@ video {
     background-color: #222;
     padding:12px;
     color:white;
+<<<<<<< Updated upstream
+=======
+}
+
+#game .door {
+    position: absolute;
+    background: transparent;
+    border:none;
+    cursor: pointer;
+    outline: none;
+}
+
+#game .controls {
+    display: flex;
+    justify-content: center;
+}
+
+#start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#start #start-video, #game-video{
+    max-width: 80%;
+    /* min-height: 80%; */
+    border-radius: 5px;
+}
+#start #start-btn {
+    text-align: center; 
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: #222;
+    color: #eee;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 6px 144px 0px rgba(0,0,0,0.75);
+
+}
+.hint{
+    background-color: black;
+    color: white;
+    width: 30px;
+    text-align: center;
+    margin:auto;
+    display: block;
+    border-radius: 3px;
+
+}
+
+#start-video:hover {
+    cursor: pointer;
+>>>>>>> Stashed changes
 }

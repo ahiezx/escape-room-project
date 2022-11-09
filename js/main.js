@@ -7,10 +7,16 @@ const source = document.querySelector("video > source")
 const startBtn = document.querySelector('#start-btn');
 const startDiv = document.querySelector('#start');
 const gameDiv = document.querySelector('#game');
+<<<<<<< Updated upstream
 let gameStage;
 
 <<<<<<< HEAD
 // functions for entering levels
+=======
+const loadVid = document.querySelector('#load-in-vid');
+const loadSrc = document.querySelector('#load-in-vid source');
+const hint = document.querySelector('.hint-text');
+>>>>>>> Stashed changes
 
 const start = () => {
     startDiv.style.display = 'none';
@@ -67,6 +73,21 @@ const videoEnded = () => {
         enterLevelTwo();
     } else if (gameStage == "level3") {
         enterLevelThree();
+<<<<<<< Updated upstream
+=======
+    } else if (gameStage == 'level1') {
+        video.play();
+    } else if (gameStage == 'level2') {
+        video.play();
+    } else if (gameStage == 'level3') {
+        video.play();
+    } else if (gameStage == 'skullscare') {
+        video.pause();
+        source.attributes.src.nodeValue = "videos/level2.webm";
+        video.load();
+        video.play();
+        gameStage = 'level2'
+>>>>>>> Stashed changes
     }
 }
 
@@ -78,7 +99,15 @@ const enterLevelOne = () => {
 }
 
 const enterLevelTwo = () => {
+<<<<<<< Updated upstream
     console.log("enter level 2");
+=======
+    video.pause();
+    startLevel(gameStage)
+    source.attributes.src.nodeValue = "videos/level2.webm";
+    video.load();
+    video.play();
+>>>>>>> Stashed changes
 }
 
 const enterLevelThree = () => {
@@ -108,6 +137,17 @@ video.addEventListener("ended", videoEnded);
 startDiv.style.display = 'block';
 gameDiv.style.display = 'none';
 =======
+
+// Skull Jumpscare
+
+const skullScare = () => {
+    video.pause();
+    source.attributes.src.nodeValue = "videos/skullscare.webm";
+    gameStage = 'skullscare'
+    video.load();
+    video.play();
+    skull.style.display = 'none'
+}
 
 // executed after DOM loaded
 levelOneDoor.addEventListener("click", videoLevelOne);
