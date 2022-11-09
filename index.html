@@ -7,10 +7,14 @@
         <title>ESCAPE ROOM</title>
         <link rel="stylesheet" href="./css/style.css">
         <script defer src="./js/main.js"></script>
+        <script defer src="./js/levels/level0.js"></script>
+        <script defer src="./js/levels/level1.js"></script>
+        <script defer src="./js/levels/level2.js"></script>
+        <script defer src="./js/levels/master.js"></script>
     </head>
     <body>
         <div id="wrapper">
-            <h1>ESCAPE ROOM</h1>
+            <!-- <h1>ESCAPE ROOM</h1> -->
             <div id="start">
                 <video autoplay muted id="start-video">
                     <source src="videos/start.webm" type="video/webm">
@@ -34,7 +38,10 @@
                 </div>
                 <br>
                 
-                <div class="hint">Hint: <i>Select a level</i></div>
+                <div class="controls">
+                    <button>Go back</button>
+                    <div class="hint">Hint: <i class="hint-text">Click on a door</i></div>
+                </div>
                 
             </div>
             <video id="load-in-vid" style="display: none;">

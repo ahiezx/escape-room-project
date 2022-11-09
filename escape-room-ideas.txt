@@ -11,3 +11,11 @@ elke deur heeft een hint
 elk level heeft meer en meer puzzels waarvan alle het antwoord nodig is om de
 code voor de deur van de level te ontcijveren.
 
+
+
+Puzzels ideen
+
+4 digit shape code - bijv. een code waarbij het volgorden gegeven woordt door vormen en het vormen een nummer gegeven is door het te
+verspreiden in het kamer met een aangegeven kan gedaan worden door het laten draien van kammer 
+
+

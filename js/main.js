@@ -1,4 +1,4 @@
-// functions 
+// vars 
 const levelOneDoor = document.querySelector("#level-one");
 const levelTwoDoor = document.querySelector("#level-two");
 const levelThreeDoor = document.querySelector("#level-three");
@@ -10,6 +10,7 @@ const startDiv = document.querySelector('#start');
 const gameDiv = document.querySelector('#game');
 const loadVid = document.querySelector('#load-in-vid')
 const loadSrc = document.querySelector('#load-in-vid source')
+const hint = document.querySelector('.hint-text')
 
 let gameStage;
 
@@ -30,63 +31,105 @@ const loadVideo = (file=text) => {
     loadVid.load()
 }
 
+// // Dynamic video loading
+// const videoLevel = (lvl) => {
+//     if (lvl == 1) {
+//         videoLevelOne();
+//     } else if (lvl == 2) {
+//         videoLevelTwo();
+//     } else if (lvl == 3) {
+//         videoLevelThree();
+//     }
+// }
+
+
 // Functions that make the videos play and stop playing properly
 const videoLevelOne = () => {
     source.attributes.src.nodeValue = 'videos/enter1.webm';
     video.load();
     video.play();
-    gameStage = "level1";
+    gameStage = 1;
+    hideDoors();
 }
 
 const videoLevelTwo = () => {
     source.attributes.src.nodeValue = "videos/enter2.webm";
     video.load();
     video.play();
-    gameStage = "level2";
+    gameStage = 2;
+    hideDoors();
 }
 
 const videoLevelThree = () => {
     source.attributes.src.nodeValue = "videos/enter3.webm";
     video.load();
     video.play();
-    gameStage = "level3"
+    gameStage = 3
+    hideDoors();
 }
 
 const videoEnded = () => {
     if (gameStage == "select") {
         video.play();
-    } else if (gameStage == "level1") {
+    } else if (gameStage == 1) {
         enterLevelOne();
-        hideDoors();
-    } else if (gameStage == "level2") {
+    } else if (gameStage == 2) {
         enterLevelTwo();
-        hideDoors();
-    } else if (gameStage == "level3") {
+    } else if (gameStage == 3) {
         enterLevelThree();
-        hideDoors();
+    } else if (gameStage == 'level1') {
+        video.play()
     }
 }
 
 // Level entering related below
 const enterLevelOne = () => {
     video.pause();
-    console.log("enter level 1");
+    startLevel(gameStage)
+    source.attributes.src.nodeValue = "videos/level1.webm";
+    video.load();
+    video.play();
 }
 
 const enterLevelTwo = () => {
-    console.log("enter level 2");
+    video.pause();
+    startLevel(gameStage)
 }
 
 const enterLevelThree = () => {
-    console.log("enter level 3");
+    video.pause();
+    startLevel(gameStage)
 }
 
-// Hide the doors after the video has ended
+// Start level to run functions in other javascript files
+const startLevel = (level) => {
+    if (level == 1) {
+        levelStart();
+    } else if (level == 2) {
+        levelOne();
+    } else if (level == 3) {
+        levelTwo();
+    } else if (level == 4) {
+        levelMaster();
+    }
+}
+
+// Hide the door hitbox after the video has ended
 const hideDoors = () => {
     levelOneDoor.style.display = 'none';
     levelTwoDoor.style.display = 'none';
     levelThreeDoor.style.display = 'none';
 }
+
+// Show the hitbox for the doors
+const showDoors = () => {
+    levelOneDoor.style.display = 'block';
+    levelTwoDoor.style.display = 'block';
+    levelThreeDoor.style.display = 'block';
+}
+
+// Change hint text
+const changeHint = (msg) => {return (hint.innerHTML = msg) ? true : false}
 
 // executed after DOM loaded
 levelOneDoor.addEventListener("click", videoLevelOne);

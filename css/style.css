@@ -7,12 +7,14 @@ body {
     padding:0;
     color: #eee;
     background-color: #222;
-    background-image: url('https://preview.redd.it/1ky60nq9nh091.png?auto=webp&s=d0319ed1afb1285f318828565c870df1495dfbe8');
+    background-image: url('/img/bg.png');
+    cursor: crosshair;
 }
 
 #wrapper {
     margin: auto;
     width: fit-content;
+    padding:10px;
     /* width:1700px; */
 }
 #wrapper h1{
@@ -34,7 +36,7 @@ video {
     /* text-align: center; */
     /* background-color: rgba(0,0,0,0.7); */
     /* border-radius: 5px; */
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 #game .hint {
@@ -68,26 +70,26 @@ video {
 }
 
 #game #level-one .door{
-    left:30%;
-    width: 5%;
+    left:23%;
+    width: 7%;
     height:33%;
     right:0;
-    top:26%;
+    top:27%;
     bottom:0;
 }
 
 #game #level-two .door{
     position: absolute;
-    left:64%;
-    width: 6%;
+    left:68%;
+    width: 9%;
     height:32%;
     right:0;
     top:28%;
     bottom:0;
 }
 #game #level-three .door{
-    left:47.9%;
-    width: 2%;
+    left:47%;
+    width: 3%;
     height:14%;
     right:0;
     top:40%;
@@ -127,7 +129,7 @@ video {
 
 #game span {
     background-color: #222;
-    padding:12px;
+    /* padding:12px; */
     color:white;
 }
 
@@ -139,11 +141,21 @@ video {
     outline: none;    
 }
 
+#game .controls {
+    display: flex;
+    justify-content: center;
+}
+
 #start {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+#start #start-video, #game-video{
+    max-width: 80%;
+    /* min-height: 80%; */
+    border-radius: 5px;
 }
 #start #start-btn {
     text-align: center; 
