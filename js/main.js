@@ -78,7 +78,17 @@ const videoEnded = () => {
     } else if (gameStage == 3) {
         enterLevelThree();
     } else if (gameStage == 'level1') {
-        video.play()
+        video.play();
+    } else if (gameStage == 'level2') {
+        video.play();
+    } else if (gameStage == 'level3') {
+        video.play();
+    } else if (gameStage == 'skullscare') {
+        video.pause();
+        source.attributes.src.nodeValue = "videos/level2.webm";
+        video.load();
+        video.play();
+        gameStage = 'level2'
     }
 }
 
@@ -94,6 +104,9 @@ const enterLevelOne = () => {
 const enterLevelTwo = () => {
     video.pause();
     startLevel(gameStage)
+    source.attributes.src.nodeValue = "videos/level2.webm";
+    video.load();
+    video.play();
 }
 
 const enterLevelThree = () => {
@@ -130,6 +143,17 @@ const showDoors = () => {
 
 // Change hint text
 const changeHint = (msg) => {return (hint.innerHTML = msg) ? true : false}
+
+// Skull Jumpscare
+
+const skullScare = () => {
+    video.pause();
+    source.attributes.src.nodeValue = "videos/skullscare.webm";
+    gameStage = 'skullscare'
+    video.load();
+    video.play();
+    skull.style.display = 'none'
+}
 
 // executed after DOM loaded
 levelOneDoor.addEventListener("click", videoLevelOne);

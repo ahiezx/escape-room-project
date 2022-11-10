@@ -184,3 +184,17 @@ video {
 #start-video:hover {
     cursor: pointer;
 }
+
+#game #skullhov button {
+    position: absolute;
+    left:24%;
+    width: 10%;
+    height:16%;
+    right:0;
+    top:51%;
+    bottom:0;
+    background: transparent;
+    border:none;
+    cursor: crosshair;
+    outline: none;
+}
