@@ -12,6 +12,7 @@ const loadVid = document.querySelector('#load-in-vid')
 const loadSrc = document.querySelector('#load-in-vid source')
 const hint = document.querySelector('.hint-text')
 
+
 let gameStage;
 
 // Necessary to make the browser autoplay the content
@@ -43,6 +44,7 @@ const loadVideo = (file=text) => {
 // }
 
 
+
 // Functions that make the videos play and stop playing properly
 const videoLevelOne = () => {
     source.attributes.src.nodeValue = 'videos/enter1.webm';
@@ -67,6 +69,7 @@ const videoLevelThree = () => {
     gameStage = 3
     hideDoors();
 }
+
 
 const videoEnded = () => {
     if (gameStage == "select") {
