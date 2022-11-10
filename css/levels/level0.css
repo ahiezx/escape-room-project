@@ -7,7 +7,7 @@
     background:transparent;
     border:transparent;
     cursor: pointer;
-    background:rgba(0, 195, 255, 0.274);
+    /* background:rgba(0, 195, 255, 0.274); */
     left:65%;
     width: 8%;
     height:18%;
@@ -17,8 +17,8 @@
 }
 #letter {
     position: absolute;
-    background:rgba(94, 255, 0, 0.274);
-    /* background:transparent; */
+    /* background:rgba(94, 255, 0, 0.274); */
+    background:transparent;
     border:transparent;
     cursor: pointer;
     left:58%;
@@ -32,8 +32,8 @@
 #hand {
     position: absolute;
     cursor: pointer;
-    background:rgba(255, 0, 0, 0.274);
-    /* background:transparent; */
+    /* background:rgba(255, 0, 0, 0.274); */
+    background:transparent;
     border:transparent;
     width: 7%;
     height:18.5%;

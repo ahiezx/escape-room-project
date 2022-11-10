@@ -9,19 +9,45 @@ body {
     background-color: #222;
     background-image: url('/img/bg.png');
     cursor: crosshair;
+    overflow: hidden;
+    user-select: none;
 }
 
 #wrapper {
     margin: auto;
     width: fit-content;
     padding:10px;
-    /* width:1700px; */
+    background-color: rgba(0,0,0,0.5);
+    height:100vh;
 }
 #wrapper h1{
     font-family: 'Annie Use Your Telescope', cursive;
     text-align: center;
     font-size:40px;
     text-shadow: 2px 2px 1px #000;
+}
+
+.code-box {
+    margin: auto;
+    width: fit-content;
+    padding:10px;
+    border: 1px solid #eee;
+    box-shadow: 0px 2px 1px #000;
+    color:white;
+    background-color: rgba(0,0,0,0.5);
+    /* height:100vh; */
+}
+
+.enter-btn {
+    background-color: #ddd;
+    padding:5px 15px 5px 15px;
+    border:none;
+    margin-top:15px;
+}
+
+h4 {
+    margin-bottom:5px;
+    font-size:30px;
 }
 
 video {
@@ -55,7 +81,7 @@ video {
     font-weight: bold;
     text-decoration: underline;
     transition: all 0.2s;
-    filter:blur(4px);
+    filter:blur(3px) grayscale(100%);
 }
 #game .hint i:hover {
     transition: all 0.2s;
@@ -129,7 +155,6 @@ video {
 
 #game span {
     background-color: #222;
-    /* padding:12px; */
     color:white;
 }
 
@@ -142,8 +167,23 @@ video {
 }
 
 #game .controls {
-    display: flex;
-    justify-content: center;
+    display:flex;
+    margin:auto;
+    width:880px;
+}
+
+#game .controls button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #222;
+    color: #eee;
+    font-size: 20px;
+    font-family: 'Annie Use Your Telescope', cursive;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
 }
 
 #start {
@@ -154,7 +194,6 @@ video {
 }
 #start #start-video, #game-video{
     max-width: 80%;
-    /* min-height: 80%; */
     border-radius: 5px;
 }
 #start #start-btn {
@@ -173,7 +212,7 @@ video {
 .hint{
     background-color: black;
     color: white;
-    width: 30px;
+    width: 120px;
     text-align: center;
     margin:auto;
     display: block;
@@ -197,4 +236,58 @@ video {
     border:none;
     cursor: crosshair;
     outline: none;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 25px;
+    text-align: center;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    background-color: #222;
+    color: #eee;
+    border-radius: 5px;
+    box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 0.75);
+
+}
+
+#modal-pass {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
 }

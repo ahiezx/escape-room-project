@@ -6,14 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ESCAPE ROOM</title>
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/levels/level1.css">
+        <link rel="stylesheet" href="./css/levels/level0.css">
         <script defer src="./js/main.js"></script>
+        <script defer src="./js/start.js"></script>
         <script defer src="./js/levels/level0.js"></script>
         <script defer src="./js/levels/level1.js"></script>
         <script defer src="./js/levels/level2.js"></script>
         <script defer src="./js/levels/master.js"></script>
+        <link rel="icon" href="./img/favicon.png">
     </head>
     <body>
+        <audio loop id="flickeringsound" style="display:none;">
+            <source src="sound/flickering.mp3" type="audio/mp3">
+        </audio>
         <div id="wrapper">
             <!-- <h1>ESCAPE ROOM</h1> -->
             <div id="start">
@@ -51,21 +56,38 @@
                             <button id="hand"></button>
                         </div>         
                     </div>
-                    <div id="skullhov" style="display: none;">
-                        <button></button>
+                    <div class="second-level">
+                        <div id="skullhov" style="display: none;">
+                            <button></button>
+                        </div>
                     </div>
                 </div>
                 <br>
                 
                 <div class="controls">
-                    <button>Go back</button>
+                    <button id="return">Go back</button>
                     <div class="hint">Hint: <i class="hint-text">Click on a door</i></div>
+                    <button id="passcode">Passcode</button>
                 </div>
                 
             </div>
             <video id="load-in-vid" style="display: none;">
                 <source src="videos/enter1.webm" type="video/webm">
             </video>
+            <div id="modal-pass">
+                <div class="modal-content">
+                    <span id="close-modal-pass" class="close">&times;</span>
+                    <h4>Passcode</h4>
+                    <input class='code-box' type='number' min='100' max='999'><br>
+                    <button class="enter-btn">ENTER</button>
+                </div>
+            </div>
+            <div id="modal">
+                <div class="modal-content">
+                    <span id="closeModal" class="close">&times;</span>
+                    <p class="modalText"></p>
+                </div>
+            </div>
         </div>
     </body>
 </html>
