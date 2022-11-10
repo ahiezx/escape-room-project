@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ESCAPE ROOM</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/levels/level1.css">
+        <script defer src="./js/main.js"></script>
+        <script defer src="./js/levels/level0.js"></script>
+        <script defer src="./js/levels/level1.js"></script>
+        <script defer src="./js/levels/level2.js"></script>
+        <script defer src="./js/levels/master.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- <h1>ESCAPE ROOM</h1> -->
+            <div id="start">
+                <video autoplay muted id="start-video">
+                    <source src="videos/start.webm" type="video/webm">
+                </video>
+            </div>
+            
+            <div id="game">
+                <div id="game-wrap">
+                    <video id="game-video">
+                        <source src="videos/select.webm" type="video/webm">
+                    </video>
+                    <div class="select-room">
+
+                        <div id="level-one">
+                            <button class="door"></button>
+                        </div>
+                        <div id="level-two">
+                            <button class="door"></button>
+                        </div>
+                        <div id="level-three">
+                            <button class="door"></button>
+                        </div>
+                    </div>
+
+                    <div class="first-level">
+                        <div>
+                            <button id="clock"></button>
+                        </div>
+                        <div>
+                            <button id="letter"></button>
+                        </div>
+                        <div>
+                            <button id="hand"></button>
+                        </div>         
+                    </div>
+                    <div id="skullhov" style="display: none;">
+                        <button></button>
+                    </div>
+                </div>
+                <br>
+                
+                <div class="controls">
+                    <button>Go back</button>
+                    <div class="hint">Hint: <i class="hint-text">Click on a door</i></div>
+                </div>
+                
+            </div>
+            <video id="load-in-vid" style="display: none;">
+                <source src="videos/enter1.webm" type="video/webm">
+            </video>
+        </div>
+    </body>
+</html>
