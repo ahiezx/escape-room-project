@@ -16,11 +16,12 @@ const closeModalBtn = document.querySelector('#closeModal');
 const passcodeBtn = document.querySelector('#passcode');
 const returnButton = document.querySelector("#return");
 const flickeringaudio = document.querySelector("#flickeringsound");
-const closeModalPassBtn = document.querySelector('#close-modal-pass')
+const eggaudio = document.querySelector("#eggsound");
+const closeModalPassBtn = document.querySelector('#close-modal-pass');
 
 let gameStage;
 
-//Modal template:
+// modal template:
 const modalTemplate = (text) => {
     document.querySelector(".modalText").innerHTML = text;
     document.querySelector('#modal').style.display = 'block';
@@ -32,6 +33,8 @@ const closeModal = () => {
         startModal()
     }
 }
+
+// custom modal for passcodes
 
 const modalPass = () => {
     document.querySelector('#modal-pass').style.display = 'block';
@@ -48,33 +51,12 @@ const start = () => {
     video.play();
     gameStage = 'select'
     flickeringaudio.play()
+    flickeringaudio.volume = 0.2
 }
 
 const replayStart = () => {
     startVideo.play()
 }
-
-// ???
-// vgm werkt dit niet
-/*
-const loadVideo = (file=text) => {
-    loadSrc.attributes.src.nodeValue = `videos/${file}.webm`;
-    loadVid.load()
-}
-*/
-
-// Dynamic video loading
-/*
-const videoLevel = (lvl) => {
-    if (lvl == 1) {
-        videoLevelOne();
-    } else if (lvl == 2) {
-        videoLevelTwo();
-    } else if (lvl == 3) {
-        videoLevelThree();
-    }
-}
-*/
 
 // Functions that make the videos play and stop playing properly
 const videoLevelOne = () => {
@@ -101,6 +83,9 @@ const videoLevelThree = () => {
     hideDoors();
 }
 
+// videoEnded event listener
+// Depending on the game stage, it'll play a new video or loop the video
+
 const videoEnded = () => {
     if (gameStage == "select") {
         video.play();
@@ -122,6 +107,8 @@ const videoEnded = () => {
         video.load();
         video.play();
         gameStage = 'level2'
+    } else {
+        video.play()
     }
 }
 
@@ -180,8 +167,7 @@ const showDoors = () => {
 // Change hint text
 const changeHint = (msg) => {return (hint.innerHTML = msg) ? true : false}
 
-// Skull Jumpscare
-
+// Skull Jumpscare (level 2)
 const skullScare = () => {
     video.pause();
     source.attributes.src.nodeValue = "videos/skullscare.webm";
@@ -191,16 +177,59 @@ const skullScare = () => {
     skull.style.display = 'none';
 }
 
+// Master scene level
+const setMasterScene = () => {
+    video.pause();
+    source.attributes.src.nodeValue = "videos/masterscene.webm";
+    video.load();
+    video.play();
+    levelMaster();
+}
+
+// Plays a video implying death
+const death = () => {
+    video.pause();
+    source.attributes.src.nodeValue = "videos/death.webm";
+    gameStage = 'master';
+    video.load();
+    video.play();
+}
+
+// Plays a win video
+const win = () => {
+    video.pause();
+    source.attributes.src.nodeValue = "videos/win.webm";
+    gameStage = 'win';
+    flickeringaudio.pause();
+    eggaudio.pause();
+    eggaudio.load();
+    eggaudio.play();
+    video.load();
+    video.play();
+}
+
+// Shows an easter egg
+const eastereggfn = () => {
+    video.pause();
+    source.attributes.src.nodeValue = "videos/easteregg.webm";
+    eggaudio.play()
+    eggaudio.volume = 0.05  
+    gameStage = 'master';
+    video.load();
+    video.play();
+}
+
+// Return to the start screen (select level)
 returnButton.addEventListener("click", () => {
-    console.log("return");
     if (gameStage == "select") {
-        alert("You are already as far back as you can go!");
+        modalTemplate("You are already as far back as you can go!");
     } else {
         gameStage = "select";
         source.attributes.src.nodeValue = "videos/select.webm";
         video.load();
         video.play();
         showDoors();
+        changeHint('Click on a door');
     }
     hideLevelOneItems();
 });

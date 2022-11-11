@@ -7,6 +7,7 @@
         <title>ESCAPE ROOM</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/levels/level0.css">
+        <link rel="stylesheet" href="./css/levels/master.css">
         <script defer src="./js/main.js"></script>
         <script defer src="./js/start.js"></script>
         <script defer src="./js/levels/level0.js"></script>
@@ -16,8 +17,14 @@
         <link rel="icon" href="./img/favicon.png">
     </head>
     <body>
-        <audio loop id="flickeringsound" style="display:none;">
-            <source src="sound/flickering.mp3" type="audio/mp3">
+        <audio loop id="flickeringsound" style="display: none;">
+            <source src="sound/backgroundnoise.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="ordersound" style="display: none;">
+            <source src="sound/order.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="eggsound" style="display: none;">
+            <source src="sound/eggsound.mp3" type="audio/mpeg">
         </audio>
         <div id="wrapper">
             <!-- <h1>ESCAPE ROOM</h1> -->
@@ -61,13 +68,25 @@
                             <button></button>
                         </div>
                     </div>
+                    <div class="master-level">
+                        <div>
+                            <button id="order"></button>
+                        </div>
+                        <div>
+                            <button id="easter-egg"></button>
+                        </div>
+                    </div>
                 </div>
                 <br>
                 
-                <div class="controls">
-                    <button id="return">Go back</button>
-                    <div class="hint">Hint: <i class="hint-text">Click on a door</i></div>
-                    <button id="passcode">Passcode</button>
+                <div class="controls-wrapper-wrapper">
+                    <div class="controls-wrapper">
+                        <div class="controls">
+                            <button id="return">Go back</button>
+                            <div class="hint">Hint: <i class="hint-text">Click on a door</i></div>
+                            <button id="passcode">Passcode</button>
+                        </div>
+                    </div>
                 </div>
                 
             </div>

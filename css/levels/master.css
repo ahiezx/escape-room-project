@@ -1,0 +1,29 @@
+#order {
+    display: none;
+    position: absolute;
+    background:transparent;
+    border:transparent;
+    cursor: pointer;
+    /* background:rgba(229, 255, 0, 0.274); */
+    left:12.5%;
+    width: 15.8%;
+    height:43%;
+    right:0;
+    top:40%;
+    bottom:0;
+}
+#easter-egg {
+    display: none;
+    position: absolute;
+    background:transparent;
+    border:transparent;
+    cursor: pointer;
+    /* background:rgba(255, 0, 212, 0.274); */
+    transform: skew(-22deg);
+    left:54.1%;
+    width: 4.2%;
+    height:3.5%;
+    right:0;
+    top:20.5%;
+    bottom:0;    
+}
