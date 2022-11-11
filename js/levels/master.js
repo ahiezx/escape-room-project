@@ -34,6 +34,8 @@ const enterPass = () => {
                 win();
             } else if (tries == 5) {
                 death();
+            } else {
+                modalTemplate(`Wrong passcode! ${5-tries} tries left`)
             }
         }
     }

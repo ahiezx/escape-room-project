@@ -12,7 +12,6 @@ const loadVid = document.querySelector('#load-in-vid');
 const loadSrc = document.querySelector('#load-in-vid source');
 const hint = document.querySelector('.hint-text');
 const modal = document.querySelector('#modal');
-const closeModalBtn = document.querySelector('#closeModal');
 const passcodeBtn = document.querySelector('#passcode');
 const returnButton = document.querySelector("#return");
 const flickeringaudio = document.querySelector("#flickeringsound");
@@ -107,8 +106,10 @@ const videoEnded = () => {
         video.load();
         video.play();
         gameStage = 'level2'
+    } else if (gameStage == 'death') {
+        modalTemplate('You lost! Refresh to try again.')
     } else {
-        video.play()
+        video.play();
     }
 }
 
@@ -190,7 +191,7 @@ const setMasterScene = () => {
 const death = () => {
     video.pause();
     source.attributes.src.nodeValue = "videos/death.webm";
-    gameStage = 'master';
+    gameStage = 'death';
     video.load();
     video.play();
 }
@@ -239,7 +240,6 @@ levelOneDoor.addEventListener("click", videoLevelOne);
 levelTwoDoor.addEventListener("click", videoLevelTwo);
 levelThreeDoor.addEventListener("click", videoLevelThree);
 modal.addEventListener("click", closeModal);
-closeModalBtn.addEventListener('click', closeModal);
 video.addEventListener("ended", videoEnded);
 startVideo.addEventListener('ended', replayStart);
 startVideo.addEventListener('click', start);
